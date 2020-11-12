@@ -1,0 +1,12 @@
+2|25|Stanislaw|Poniatowski|32|32|23
+3|25|Zenek|as|sa|sa|as|
+4|25|Ziemek|as|sa|sa|as|
+5|25|Kazek|sad|dsa|das|asd|
+6|1|Edward|Dudek|3432|2312|asad|
+7|1|Zbyszek|Kieliszek|2312|asd|das|
+8|1|Mirek|Zientek|2213|123|32|
+10|1|Mirek|Staszek|asd|asd|das|
+11|1|WOjtek|Zientek|asd|ad|dsa|
+12|1|Staszek|Nedza|543|staszek@gma|sad|
+13|1|  mietek|Bulawa|23|32|3|
+14|1|St|S|st|st|st|
