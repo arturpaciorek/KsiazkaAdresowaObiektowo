@@ -10,28 +10,58 @@ void KsiazkaAdresowa :: wypiszWszystkichUzytkownikow()
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
 
-int KsiazkaAdresowa :: logowanieUzytkownika()
+void KsiazkaAdresowa :: logowanieUzytkownika()
 {
-    return uzytkownikMenedzer.logowanieUzytkownika();
+    uzytkownikMenedzer.logowanieUzytkownika();
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+    }
+
 }
 void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
 {
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
 }
-int KsiazkaAdresowa :: wylogowanieUzytkownika()
+void KsiazkaAdresowa :: wylogowanieUzytkownika()
 {
-   return uzytkownikMenedzer.wylogowanieUzytkownika();
+    uzytkownikMenedzer.wylogowanieUzytkownika();
+    delete adresatMenedzer;
+    adresatMenedzer=NULL;
 }
-int KsiazkaAdresowa :: WczytajAdresatowZalogowanegouzytkownikaZPliku(int idZalogowanegoUzytkownika)
+
+void KsiazkaAdresowa :: dodajAdresata()
 {
-    return adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-};
-int KsiazkaAdresowa :: dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
-{
-    return adresatMenedzer.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->dodajAdresata();
+    }
+    else
+    {
+        cout<< "Aby dodac adresata, nalezy sie najpierw zalogowac ! "<<endl;
+        system("pause");
+    }
 
 };
 void KsiazkaAdresowa :: wyswietlWszystkichAdresatow()
 {
-    adresatMenedzer.wyswietlWszystkichAdresatow();
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->wyswietlWszystkichAdresatow();
+    }
+
+};
+
+char KsiazkaAdresowa :: wybierzOpcjeZMenuGlownego()
+{
+    return uzytkownikMenedzer.wybierzOpcjeZMenuGlownego();
+};
+char KsiazkaAdresowa :: wybierzOpcjeZMenuUzytkownika()
+{
+    return uzytkownikMenedzer.wybierzOpcjeZMenuUzytkownika();
+};
+
+int KsiazkaAdresowa :: pobierzIdZalogowanegoUzytkownika()
+{
+    return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 };

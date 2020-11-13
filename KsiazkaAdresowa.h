@@ -11,19 +11,32 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
-    AdresatMenedzer adresatMenedzer;
+    AdresatMenedzer *adresatMenedzer;
+    int idZalogowanegoUzytkownika;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresatMenedzer(nazwaPlikuZAdresatami){
-    uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
+        : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
+    {
+        adresatMenedzer = NULL;
     };
+    ~KsiazkaAdresowa()
+    {
+        delete adresatMenedzer;
+        adresatMenedzer=NULL;
+    }
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    int logowanieUzytkownika();
+    void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
-    int wylogowanieUzytkownika();
-    int dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
-    int WczytajAdresatowZalogowanegouzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void  wylogowanieUzytkownika();
+    void dodajAdresata();
+    void WczytajAdresatowZalogowanegouzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+
 };
 
 #endif

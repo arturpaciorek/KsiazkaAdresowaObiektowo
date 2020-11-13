@@ -1,4 +1,4 @@
-1|art|321|
+1|art|4321|
 2|Jozek|543s|
 3|1|art|
 4|stachu|321|
@@ -6,3 +6,4 @@
 6|misza|feds|
 7|bc|as|
 8|bf|cz|
+9|32|123|
