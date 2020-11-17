@@ -65,3 +65,21 @@ int KsiazkaAdresowa :: pobierzIdZalogowanegoUzytkownika()
 {
     return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 };
+
+void KsiazkaAdresowa :: wyszukajAdresatowPoImieniu()
+{
+    adresatMenedzer->wyszukajAdresatowPoImieniu();
+};
+
+void KsiazkaAdresowa :: wyszukajAdresatowPoNazwisku()
+{
+    adresatMenedzer->wyszukajAdresatowPoNazwisku();
+};
+void KsiazkaAdresowa :: edytujAdresata()
+{
+    adresatMenedzer->edytujAdresata();
+};
+void KsiazkaAdresowa :: usunAdresata()
+{
+    adresatMenedzer->usunAdresata();
+};

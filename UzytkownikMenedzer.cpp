@@ -7,7 +7,7 @@ void UzytkownikMenedzer :: rejestracjaUzytkownika()
     uzytkownicy.push_back(uzytkownik);
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
-    system("pause");
+    //system("pause");
 }
 
 Uzytkownik UzytkownikMenedzer :: podajDaneNowegoUzytkownika()
@@ -185,3 +185,4 @@ int UzytkownikMenedzer :: pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
 };
+

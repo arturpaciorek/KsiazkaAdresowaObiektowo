@@ -5,6 +5,7 @@
 #include <vector>
 #include <fstream>
 
+
 #include "Uzytkownik.h"
 #include "MetodyPomocnicze.h"
 
@@ -13,7 +14,7 @@ using namespace std;
 class PlikZUzytkownikami
 {
     string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
-    bool czyPlikJestPusty();
+    bool czyPlikJestPusty(fstream &plikTekstowy);
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 public:

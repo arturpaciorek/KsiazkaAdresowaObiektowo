@@ -90,7 +90,7 @@ bool PlikZAdresatami :: dopiszAdresataDoPliku(Adresat adresat)
     {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (czyPlikJestPusty() == true)
+        if (czyPlikJestPusty(plikTekstowy) == true)
         {
             plikTekstowy << liniaZDanymiAdresata;
         }
@@ -107,6 +107,39 @@ bool PlikZAdresatami :: dopiszAdresataDoPliku(Adresat adresat)
 
 }
 
+bool PlikZAdresatami :: czyPlikJestPusty(fstream &plikTekstowy)
+{
+
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+        return true;
+    else
+        return false;
+}
+
+int PlikZAdresatami :: pobierzIdOstatniegoAdresata()
+{
+    return idOstatniegoAdresata;
+}
+
+string PlikZAdresatami :: pobierzNazwePlikuZAdresatami()
+{
+    return PlikZAdresatami::NAZWA_PLIKU_Z_ADRESATAMI;
+};
+
+void PlikZAdresatami :: usunPlik(string nazwaPlikuZRozszerzeniem)
+{
+    if (remove(nazwaPlikuZRozszerzeniem.c_str()) == 0) {}
+    else
+        cout << "Nie udalo sie usunac pliku " << nazwaPlikuZRozszerzeniem << endl;
+};
+void PlikZAdresatami :: zmienNazwePliku(string staraNazwa, string nowaNazwa)
+{
+    if (rename(staraNazwa.c_str(), nowaNazwa.c_str()) == 0) {}
+    else
+        cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
+};
+
 string PlikZAdresatami :: zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat)
 {
     string liniaZDanymiAdresata = "";
@@ -120,18 +153,4 @@ string PlikZAdresatami :: zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiK
     liniaZDanymiAdresata += adresat.pobierzAdres() + '|';
 
     return liniaZDanymiAdresata;
-}
-bool PlikZAdresatami :: czyPlikJestPusty()
-{
-    fstream plikTekstowy;
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-}
-
-int PlikZAdresatami :: pobierzIdOstatniegoAdresata()
-{
-
-}
+};

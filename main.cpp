@@ -16,78 +16,62 @@ int main()
         if(idZalogowanegoUzytkownika ==0)
         {
             wybor = ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
-        switch (wybor)
-        {
-        case '1':
-            ksiazkaAdresowa.rejestracjaUzytkownika();
-            break;
-        case '2':
-           ksiazkaAdresowa.logowanieUzytkownika();
-            break;
-        case '9':
-            exit(0);
-            break;
-        default:
-            cout << endl << " Nie ma takiej opcji w menu. " << endl << endl;
-            system("pause");
-            break;
-        }
+            switch (wybor)
+            {
+            case '1':
+                ksiazkaAdresowa.rejestracjaUzytkownika();
+                break;
+            case '2':
+                ksiazkaAdresowa.logowanieUzytkownika();
+                break;
+            case '9':
+                exit(0);
+                break;
+            default:
+                cout << endl << " Nie ma takiej opcji w menu. " << endl << endl;
+                system("pause");
+                break;
+            }
 
         }
         else
-            {
+        {
             wybor = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
             switch (wybor)
-        {
-        case '1':
-            ksiazkaAdresowa.dodajAdresata();
-            break;
-        case '2':
-           cout<< "Ta opcja bedzie dostepna w kolejnej wersji programu."<<endl;
-           system("pause");
-            break;
-         case '3':
-           cout<< "Ta opcja bedzie dostepna w kolejnej wersji programu."<<endl;
-           system("pause");
-            break;
+            {
+            case '1':
+                ksiazkaAdresowa.dodajAdresata();
+                break;
+            case '2':
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
+                break;
+            case '3':
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
+                break;
             case '4':
-           ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-            break;
+                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+                break;
             case '5':
-           cout<< "Ta opcja bedzie dostepna w kolejnej wersji programu."<<endl;
-           system("pause");
-            break;
+                ksiazkaAdresowa.usunAdresata();
+                break;
             case '6':
-          cout<< "Ta opcja bedzie dostepna w kolejnej wersji programu."<<endl;
-          system("pause");
-            break;
+                ksiazkaAdresowa.edytujAdresata();
+                break;
             case '7':
-           ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
             case '8':
-           ksiazkaAdresowa.wylogowanieUzytkownika();
-            break;
-        case '9':
-            exit(0);
-            break;
-        default:
-            cout << endl << " Nie ma takiej opcji w menu. " << endl << endl;
-            system("pause");
-            break;
-        }
-
+                ksiazkaAdresowa.wylogowanieUzytkownika();
+                break;
+            case '9':
+                exit(0);
+                break;
+            default:
+                cout << endl << " Nie ma takiej opcji w menu. " << endl << endl;
+                system("pause");
+                break;
             }
-
+        }
     }
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
 
-    //idOstatniegoAdresata = ksiazkaAdresowa.WczytajAdresatowZalogowanegouzytkownikaZPliku(idZalogowanegoUzytkownika);
-   // idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
-    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
-    //idZalogowanegoUzytkownika = ksiazkaAdresowa.wylogowanieUzytkownika();
-
-   // ;
-   //ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-   // ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     return 0;
 }
