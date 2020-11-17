@@ -11,7 +11,7 @@
 	<iostream>
 	<vector>
 
-1605602754 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\main.cpp
+1605618201 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 
@@ -35,14 +35,15 @@
 	"PlikZUzytkownikami.h"
 	"MetodyPomocnicze.h"
 
-1605517052 c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzuzytkownikami.h
+1605618778 c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
 	"Uzytkownik.h"
 	"MetodyPomocnicze.h"
+	"PlikTekstowy.h"
 
-1605517061 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzuzytkownikami.cpp
+1605618657 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
 1605530692 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\uzytkownikmenedzer.cpp
@@ -56,15 +57,16 @@
 1605537645 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1605564505 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzadresatami.cpp
+1605617275 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1605564563 c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzadresatami.h
+1605618859 c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\plikzadresatami.h
 	<iostream>
 	<vector>
 	<fstream>
 	"Adresat.h"
 	"MetodyPomocnicze.h"
+	"PlikTekstowy.h"
 
 1605272332 c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\adresat.h
 	<iostream>
@@ -91,4 +93,11 @@
 	"PlikZAdresatami.h"
 	"MetodyPomocnicze.h"
 	"Adresat.h"
+
+1605617832 c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\pliktekstowy.h
+	<iostream>
+	<fstream>
+
+1605617832 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\pliktekstowy.cpp
+	"PlikTekstowy.h"
 

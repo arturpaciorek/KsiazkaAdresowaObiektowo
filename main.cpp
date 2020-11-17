@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int idZalogowanegoUzytkownika =0;
-    int idOstatniegoAdresata =0;
+
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "KsiazkaAdresowa.txt");
 
     char wybor;

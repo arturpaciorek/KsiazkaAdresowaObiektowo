@@ -4,12 +4,11 @@ vector <Adresat> PlikZAdresatami :: wczytajAdresatowZalogowanegoUzytkownikaZPlik
 {
     vector <Adresat> adresaci;
     Adresat adresat;
-    int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
-    //string nazwaPlikuZAdresatami;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
+
+    plikTekstowy.open(pobierzNazwePliku().c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
@@ -84,13 +83,13 @@ bool PlikZAdresatami :: dopiszAdresataDoPliku(Adresat adresat)
 {
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
+    plikTekstowy.open(pobierzNazwePliku().c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true)
     {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (czyPlikJestPusty(plikTekstowy) == true)
+        if (PlikTekstowy :: czyPlikJestPusty(plikTekstowy) == true)
         {
             plikTekstowy << liniaZDanymiAdresata;
         }
@@ -100,21 +99,11 @@ bool PlikZAdresatami :: dopiszAdresataDoPliku(Adresat adresat)
         }
         idOstatniegoAdresata++;
         plikTekstowy.close();
+    return true;
 
     }
 
     return false;
-
-}
-
-bool PlikZAdresatami :: czyPlikJestPusty(fstream &plikTekstowy)
-{
-
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
 }
 
 int PlikZAdresatami :: pobierzIdOstatniegoAdresata()
@@ -124,7 +113,7 @@ int PlikZAdresatami :: pobierzIdOstatniegoAdresata()
 
 string PlikZAdresatami :: pobierzNazwePlikuZAdresatami()
 {
-    return PlikZAdresatami::NAZWA_PLIKU_Z_ADRESATAMI;
+    return PlikZAdresatami::pobierzNazwePliku();
 };
 
 void PlikZAdresatami :: usunPlik(string nazwaPlikuZRozszerzeniem)
