@@ -88,9 +88,7 @@ void AdresatMenedzer :: dodajAdresata()
     else
         cout<< "Blad. Nie udalo sie dodac nowego adresata do pliku. "<<endl;
     system("pause");
-    //plikZAdresatami.dopiszAdresataDoPliku(adresat);
 
-    // return ++idOstatniegoAdresata;
 }
 
 void AdresatMenedzer :: wyszukajAdresatowPoImieniu()
@@ -293,7 +291,7 @@ void AdresatMenedzer :: edytujWybranaLinieWPliku(Adresat adresat, string liniaZD
     string wczytanaLinia = "";
     int numerWczytanejLinii = 1;
     static string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt";
-    string nazwaPlikuZAdresatami = plikZAdresatami.pobierzNazwePlikuZAdresatami();
+    string nazwaPlikuZAdresatami = plikZAdresatami.pobierzNazwePliku();
     odczytywanyPlikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
     tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);
 
@@ -332,7 +330,7 @@ void  AdresatMenedzer :: usunWybranaLinieWPliku(Adresat adresat)
     int numerUsuwanejLinii = 1;
     bool usuwanaLiniaZostalaNapotkana = false;
 
-    string nazwaPlikuZAdresatami = plikZAdresatami.pobierzNazwePlikuZAdresatami();
+    string nazwaPlikuZAdresatami = plikZAdresatami.pobierzNazwePliku();
     string nazwaTymczasowegoPlikuZAdresatami  = "Adresaci_tymczasowo.txt";
     odczytywanyPlikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
     tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);

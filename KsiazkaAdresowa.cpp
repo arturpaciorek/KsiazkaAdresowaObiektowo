@@ -3,6 +3,7 @@
 void KsiazkaAdresowa :: rejestracjaUzytkownika()
 {
     uzytkownikMenedzer.rejestracjaUzytkownika();
+
 };
 
 void KsiazkaAdresowa :: wypiszWszystkichUzytkownikow()
