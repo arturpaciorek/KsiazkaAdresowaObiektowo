@@ -32,7 +32,7 @@ vector <Adresat> PlikZAdresatami :: wczytajAdresatowZalogowanegoUzytkownikaZPlik
         idOstatniegoAdresata = MetodyPomocnicze:: pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
 
     }
-   return adresaci;
+    return adresaci;
 }
 
 Adresat PlikZAdresatami :: pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)
@@ -81,25 +81,29 @@ Adresat PlikZAdresatami :: pobierzDaneAdresata(string daneAdresataOddzielonePion
 }
 bool PlikZAdresatami :: dopiszAdresataDoPliku(Adresat adresat)
 {
-    string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
+    string liniaZDanymiAdresata = "";
+
     plikTekstowy.open(pobierzNazwePliku().c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true)
     {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (PlikTekstowy :: czyPlikJestPusty(plikTekstowy) == true)
+        if (PlikZAdresatami::czyPlikJestPusty() == true)
         {
+
             plikTekstowy << liniaZDanymiAdresata;
+            system("pause");
         }
         else
         {
+
             plikTekstowy << endl << liniaZDanymiAdresata ;
         }
         idOstatniegoAdresata++;
         plikTekstowy.close();
-    return true;
+        return true;
 
     }
 
@@ -111,10 +115,6 @@ int PlikZAdresatami :: pobierzIdOstatniegoAdresata()
     return idOstatniegoAdresata;
 }
 
-string PlikZAdresatami :: pobierzNazwePlikuZAdresatami()
-{
-    return PlikZAdresatami::pobierzNazwePliku();
-};
 
 void PlikZAdresatami :: usunPlik(string nazwaPlikuZRozszerzeniem)
 {

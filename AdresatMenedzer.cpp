@@ -76,8 +76,6 @@ Adresat AdresatMenedzer :: podajDaneNowegoAdresata()
 
 void AdresatMenedzer :: dodajAdresata()
 {
-    Adresat adresat;
-
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
     adresat = podajDaneNowegoAdresata();

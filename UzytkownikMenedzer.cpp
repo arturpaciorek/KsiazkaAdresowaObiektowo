@@ -8,6 +8,7 @@ void UzytkownikMenedzer :: rejestracjaUzytkownika()
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     //system("pause");
+    zapiszWszystkichUzytkownikowDoPliku();
 }
 
 Uzytkownik UzytkownikMenedzer :: podajDaneNowegoUzytkownika()
@@ -123,10 +124,10 @@ void UzytkownikMenedzer :: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanego
             system("pause");
         }
     }
-    zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    zapiszWszystkichUzytkownikowDoPliku();
     //return 0;
 }
-void UzytkownikMenedzer :: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy)
+void UzytkownikMenedzer :: zapiszWszystkichUzytkownikowDoPliku()
 {
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 };

@@ -7,7 +7,7 @@ int main()
 {
     int idZalogowanegoUzytkownika =0;
 
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "KsiazkaAdresowa.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "KsiazkaAdresowa1.txt");
 
     char wybor;
     while(true)
@@ -20,6 +20,7 @@ int main()
             {
             case '1':
                 ksiazkaAdresowa.rejestracjaUzytkownika();
+
                 break;
             case '2':
                 ksiazkaAdresowa.logowanieUzytkownika();

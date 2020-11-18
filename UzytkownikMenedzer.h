@@ -22,7 +22,7 @@ class UzytkownikMenedzer
     bool czyIstniejeLogin(string login);
     PlikZUzytkownikami plikZUzytkownikami;
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
-    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);
+    void zapiszWszystkichUzytkownikowDoPliku();
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){
     idZalogowanegoUzytkownika = 0;
