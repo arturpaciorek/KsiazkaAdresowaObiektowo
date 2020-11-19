@@ -84,3 +84,8 @@ void KsiazkaAdresowa :: usunAdresata()
 {
     adresatMenedzer->usunAdresata();
 };
+
+void KsiazkaAdresowa :: WczytajAdresatowZalogowanegouzytkownikaZPliku(int idZalogowanegoUzytkownika)
+{
+    adresatMenedzer->wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+};

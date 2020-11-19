@@ -54,6 +54,7 @@ int main()
                 break;
             case '5':
                 ksiazkaAdresowa.usunAdresata();
+                ksiazkaAdresowa.WczytajAdresatowZalogowanegouzytkownikaZPliku(idZalogowanegoUzytkownika);
                 break;
             case '6':
                 ksiazkaAdresowa.edytujAdresata();

@@ -11,7 +11,7 @@
 	<iostream>
 	<vector>
 
-1605776188 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\main.cpp
+1605798067 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 
@@ -77,7 +77,7 @@
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 
-1605796010 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\adresatmenedzer.cpp
+1605796103 source:c:\users\artur paciorek\documents\personalia\przyszly programista\ksiazkaadresowaobiektowo\projekt\ksiazkaadresowaobiektowoprojekt\adresatmenedzer.cpp
 	"AdresatMenedzer.h"
 	"Adresat.h"
 	"PlikZAdresatami.h"
