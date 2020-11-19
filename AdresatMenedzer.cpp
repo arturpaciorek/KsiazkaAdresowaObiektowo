@@ -369,7 +369,7 @@ void  AdresatMenedzer :: usunWybranaLinieWPliku(Adresat adresat)
     }
 }
 
-void AdresatMenedzer :: usunAdresata()
+int AdresatMenedzer :: usunAdresata()
 {
     int idUsuwanegoAdresata = 0;
     int numerLiniiUsuwanegoAdresata = 0;
@@ -382,8 +382,10 @@ void AdresatMenedzer :: usunAdresata()
     bool czyIstniejeAdresat = false;
 
 
-    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    for (vector <Adresat>::iterator itr = adresaci.begin(); (itr != adresaci.end()) ; itr++)
+
     {
+
         if (itr->pobierzId() == idUsuwanegoAdresata)
         {
             czyIstniejeAdresat = true;
@@ -395,11 +397,13 @@ void AdresatMenedzer :: usunAdresata()
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
+                return 0;
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
                 system("pause");
+                return 0;
 
             }
         }

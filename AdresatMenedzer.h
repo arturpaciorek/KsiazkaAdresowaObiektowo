@@ -44,7 +44,7 @@ public:
     int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     void edytujWybranaLinieWPliku(Adresat adresat, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
-    void usunAdresata();
+    int usunAdresata();
     void usunWybranaLinieWPliku(Adresat adresat);
 
 };
