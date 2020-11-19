@@ -337,7 +337,7 @@ void  AdresatMenedzer :: usunWybranaLinieWPliku(Adresat adresat)
     {
         while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
         {
-            if(adresat.pobierzId() != MetodyPomocnicze::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+            if(adresat.pobierzId() == MetodyPomocnicze::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
             {
                 usuwanaLiniaZostalaNapotkana = true;
 
@@ -382,17 +382,17 @@ void AdresatMenedzer :: usunAdresata()
     bool czyIstniejeAdresat = false;
 
 
-    for (int i = 0; i < adresaci.size(); i++)
+    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
     {
-        if (adresaci[i].pobierzId() == idUsuwanegoAdresata)
+        if (itr->pobierzId() == idUsuwanegoAdresata)
         {
             czyIstniejeAdresat = true;
             cout << endl << "Potwierdz naciskajac klawisz 't': ";
             znak = MetodyPomocnicze::wczytajZnak();
             if (znak == 't')
             {
-                usunWybranaLinieWPliku(adresaci[i]);
-                //adresaci.erase(itr);
+                usunWybranaLinieWPliku(*itr);
+                adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
             }

@@ -7,7 +7,7 @@ int main()
 {
     int idZalogowanegoUzytkownika =0;
 
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "KsiazkaAdresowa1.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "KsiazkaAdresowa.txt");
 
     char wybor;
     while(true)

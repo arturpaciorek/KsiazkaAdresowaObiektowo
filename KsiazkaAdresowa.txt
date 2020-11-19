@@ -1,10 +1,7 @@
 1|2|Joziu|Pierzyna|1234|ad|432|
 2|1|Jozek|Piekarz|1234|ad|432|
-3|1|Kaziu|Zwierzyna|123|mail@kazia|adresKazia|
 4|2|Kazik|Zwierzana|1223|mail@kazia|adresKazia|
-5|1|Art|Kaziu|45|asd|dsa|
 6|2|Kazek|Cola|123|321|q|
-7|1|Mietek|Szczescia|123|32|12|
 8|2|Wiesiek|Wszywka|as|da|asdas|
 9|7|Zbyszek|Naz|as2|12|12|
 10|1|Emil|Gosto|123|31|21|
